@@ -1,1 +1,61 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_repeat" id="86" inline="true" x="-2283" y="-390">
+    <value name="TIMES">
+      <block type="math_number" id="113">
+        <field name="NUM">1000</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_forward" id="10">
+        <next>
+          <block type="controls_if" id="120" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="146">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="156"></block>
+            </statement>
+            <next>
+              <block type="controls_if" id="163" inline="false">
+                <value name="IF0">
+                  <block type="sensor_object" id="186">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="196"></block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="262" inline="false">
+                    <value name="IF0">
+                      <block type="sensor_object" id="248">
+                        <field name="OBJECT">LEFTSIDE</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_right" id="279"></block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="269" inline="false">
+                        <value name="IF0">
+                          <block type="sensor_object" id="255">
+                            <field name="OBJECT">RIGHTSIDE</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="movement_left" id="299"></block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
